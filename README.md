@@ -7,15 +7,16 @@
   <title>My Portfolio</title>
   <style>
     *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Arial,sans-serif;}
-    body{color:#333;line-height:1.6;background:#f7f9fc;}
+    body{color:#333;line-height:1.6;background:#f8fafc;scroll-behavior:smooth;}
     a{text-decoration:none;}
+
     /* Container */
     .container{max-width:1200px;margin:auto;padding:0 20px;}
 
     /* Header */
     header{background:rgba(34,34,34,0.9);backdrop-filter:blur(8px);position:fixed;width:100%;top:0;z-index:100;}
     .navbar{display:flex;justify-content:space-between;align-items:center;padding:1rem 2rem;color:#fff;}
-    .logo{font-size:1.5rem;font-weight:bold;color:#00e0ff;}
+    .logo{font-size:1.6rem;font-weight:bold;color:#00e0ff;}
     .nav-links{list-style:none;display:flex;}
     .nav-links li{margin-left:20px;}
     .nav-links a{color:#fff;transition:.3s;font-weight:500;}
@@ -31,36 +32,36 @@
     /* Hero */
     .hero{
       height:100vh;
-      background:linear-gradient(to bottom right,rgba(0,0,0,0.7),rgba(0,0,0,0.6)),url('https://source.unsplash.com/1600x900/?coding,workspace') center/cover no-repeat;
+      background:linear-gradient(to bottom right,rgba(0,0,0,0.75),rgba(0,0,0,0.6)),url('https://source.unsplash.com/1600x900/?technology,workspace') center/cover no-repeat;
       display:flex;justify-content:center;align-items:center;text-align:center;color:white;padding:0 20px;
     }
-    .hero h1{font-size:3rem;margin-bottom:10px;}
+    .hero h1{font-size:3.5rem;margin-bottom:15px;animation:fadeInDown 1s;}
     .hero span{color:#00e0ff;}
-    .hero p{font-size:1.2rem;opacity:.85;}
+    .hero p{font-size:1.3rem;opacity:.9;animation:fadeInUp 1.3s;}
     .btn{
-      display:inline-block;padding:12px 25px;margin-top:25px;background:#00e0ff;color:white;border-radius:50px;transition:.3s;
-      font-weight:600;box-shadow:0 4px 15px rgba(0,0,0,0.2);
+      display:inline-block;padding:14px 28px;margin-top:30px;background:#00e0ff;color:white;border-radius:50px;transition:.3s;
+      font-weight:600;box-shadow:0 4px 15px rgba(0,0,0,0.25);
     }
     .btn:hover{background:#00b8d9;transform:translateY(-3px);}
 
     /* Sections */
     section{padding:100px 20px;}
-    h2{font-size:2.2rem;margin-bottom:30px;text-align:center;color:#222;}
+    h2{font-size:2.5rem;margin-bottom:40px;text-align:center;color:#222;}
 
     /* About */
     .about{background:white;}
-    .about p{max-width:800px;margin:auto;font-size:1.1rem;color:#555;line-height:1.8;text-align:center;}
+    .about p{max-width:800px;margin:auto;font-size:1.15rem;color:#555;line-height:1.8;text-align:center;}
 
     /* Projects */
-    .projects{background:#f0f4f8;}
+    .projects{background:linear-gradient(to right,#e0f7fa,#f1f8ff);}
     .projects-grid{
-      display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px;
+      display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;
       max-width:1000px;margin:auto;
     }
     .project-card{
-      padding:25px;background:rgba(255,255,255,0.7);border-radius:15px;
+      padding:25px;background:rgba(255,255,255,0.75);border-radius:15px;
       backdrop-filter:blur(8px);box-shadow:0 8px 20px rgba(0,0,0,0.1);
-      transition:.3s;
+      transition:.3s;opacity:0;transform:translateY(30px);
     }
     .project-card h3{margin-bottom:10px;color:#00bcd4;}
     .project-card:hover{transform:translateY(-8px);box-shadow:0 12px 25px rgba(0,0,0,0.15);}
@@ -69,16 +70,21 @@
     .contact{background:white;}
     form{max-width:500px;margin:auto;display:flex;flex-direction:column;}
     form input,form textarea{
-      margin:10px 0;padding:12px;border:1px solid #ccc;border-radius:8px;font-size:1rem;
+      margin:10px 0;padding:14px;border:1px solid #ccc;border-radius:8px;font-size:1rem;
     }
     form button{
-      background:#00e0ff;color:white;border:none;padding:12px;border-radius:50px;
+      background:#00e0ff;color:white;border:none;padding:14px;border-radius:50px;
       cursor:pointer;transition:.3s;font-weight:bold;
     }
     form button:hover{background:#00b8d9;transform:scale(1.05);}
 
     /* Footer */
     footer{background:#222;color:#fff;text-align:center;padding:1rem;margin-top:20px;}
+
+    /* Animations */
+    @keyframes fadeInDown{from{opacity:0;transform:translateY(-30px);}to{opacity:1;transform:translateY(0);}}
+    @keyframes fadeInUp{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
+    .fade-in {opacity:1!important;transform:translateY(0)!important;transition:all .6s ease;}
   </style>
 </head>
 <body>
@@ -99,9 +105,9 @@
   <!-- Hero Section -->
   <section id="home" class="hero">
     <div>
-      <h1>Hi, I'm <span>Your Name</span></h1>
-      <p>Crafting beautiful & functional web experiences</p>
-      <a href="#projects" class="btn">View My Work</a>
+      <h1>Hi, I'm <span> Goodness </span></h1>
+      <p>Building modern, responsive, and engaging web experiences</p>
+      <a href="#projects" class="btn">See My Work</a>
     </div>
   </section>
 
@@ -110,8 +116,8 @@
     <div class="container">
       <h2>About Me</h2>
       <p>Hello! I'm a web developer passionate about creating beautiful and functional websites. 
-         I specialize in turning ideas into reality using clean, modern code and intuitive design.
-      </p>
+         I specialize in building responsive, user-friendly, and visually stunning applications 
+         using modern technologies. Let’s bring your ideas to life!</p>
     </div>
   </section>
 
@@ -172,6 +178,16 @@
     const menuToggle=document.querySelector(".menu-toggle");
     const navLinks=document.querySelector(".nav-links");
     menuToggle.addEventListener("click",()=>{navLinks.classList.toggle("active");});
+    // Scroll animation for project cards
+    const cards=document.querySelectorAll(".project-card");
+    window.addEventListener("scroll",()=>{
+      cards.forEach(card=>{
+        const rect=card.getBoundingClientRect();
+        if(rect.top<window.innerHeight-50){
+          card.classList.add("fade-in");
+        }
+      });
+    });
   </script>
 </body>
 </html>
