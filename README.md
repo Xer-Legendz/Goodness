@@ -9,23 +9,25 @@
     *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Arial,sans-serif;}
     body{color:#333;line-height:1.6;background:#f8fafc;scroll-behavior:smooth;}
     a{text-decoration:none;}
+    img{max-width:100%;}
 
     /* Container */
     .container{max-width:1200px;margin:auto;padding:0 20px;}
 
     /* Header */
-    header{background:rgba(34,34,34,0.9);backdrop-filter:blur(8px);position:fixed;width:100%;top:0;z-index:100;}
+    header{background:rgba(34,34,34,0.95);backdrop-filter:blur(8px);position:fixed;width:100%;top:0;z-index:100;}
     .navbar{display:flex;justify-content:space-between;align-items:center;padding:1rem 2rem;color:#fff;}
     .logo{font-size:1.6rem;font-weight:bold;color:#00e0ff;}
     .nav-links{list-style:none;display:flex;}
     .nav-links li{margin-left:20px;}
     .nav-links a{color:#fff;transition:.3s;font-weight:500;}
     .nav-links a:hover{color:#00e0ff;}
-    .menu-toggle{display:none;font-size:1.8rem;cursor:pointer;color:#fff;}
+    .menu-toggle{display:none;font-size:2rem;cursor:pointer;color:#fff;}
     @media(max-width:768px){
       .nav-links{flex-direction:column;display:none;background:#222;width:100%;text-align:center;}
+      .nav-links li{margin:15px 0;}
       .nav-links.active{display:flex;}
-      .navbar{flex-direction:column;}
+      .navbar{flex-direction:row;}
       .menu-toggle{display:block;}
     }
 
@@ -43,23 +45,30 @@
       font-weight:600;box-shadow:0 4px 15px rgba(0,0,0,0.25);
     }
     .btn:hover{background:#00b8d9;transform:translateY(-3px);}
+    @media(max-width:768px){
+      .hero h1{font-size:2.2rem;}
+      .hero p{font-size:1rem;}
+      .btn{padding:12px 20px;font-size:.95rem;}
+    }
 
     /* Sections */
     section{padding:100px 20px;}
-    h2{font-size:2.5rem;margin-bottom:40px;text-align:center;color:#222;}
+    h2{font-size:2.3rem;margin-bottom:40px;text-align:center;color:#222;}
+    @media(max-width:768px){h2{font-size:1.8rem;}}
 
     /* About */
     .about{background:white;}
     .about p{max-width:800px;margin:auto;font-size:1.15rem;color:#555;line-height:1.8;text-align:center;}
+    @media(max-width:768px){.about p{font-size:1rem;}}
 
     /* Projects */
     .projects{background:linear-gradient(to right,#e0f7fa,#f1f8ff);}
     .projects-grid{
-      display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;
+      display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px;
       max-width:1000px;margin:auto;
     }
     .project-card{
-      padding:25px;background:rgba(255,255,255,0.75);border-radius:15px;
+      padding:25px;background:rgba(255,255,255,0.8);border-radius:15px;
       backdrop-filter:blur(8px);box-shadow:0 8px 20px rgba(0,0,0,0.1);
       transition:.3s;opacity:0;transform:translateY(30px);
     }
@@ -105,7 +114,7 @@
   <!-- Hero Section -->
   <section id="home" class="hero">
     <div>
-      <h1>Hi, I'm <span> Goodness </span></h1>
+      <h1>Hi, I'm <span>Your Name</span></h1>
       <p>Building modern, responsive, and engaging web experiences</p>
       <a href="#projects" class="btn">See My Work</a>
     </div>
